@@ -4,7 +4,7 @@ import com.deiz0n.cleanarchitectureexample.core.dtos.CategoryDTO;
 
 import java.util.List;
 
-public interface ProductRepositoryService {
+public interface CategoryRepositoryService {
 
     CategoryDTO create(CategoryDTO request);
     List<CategoryDTO> getAll();

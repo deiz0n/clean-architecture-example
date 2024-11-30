@@ -6,14 +6,14 @@ import com.deiz0n.cleanarchitectureexample.core.useCases.CreateCategoryUseCase;
 
 public class CreateCategoryUseCaseImpl implements CreateCategoryUseCase {
 
-    private ProductRepositoryService productRepository;
+    private CategoryRepositoryService categoryRepository;
 
     @Override
     public CategoryDTO process(CategoryDTO request) {
-        if (productRepository.doesCategoryNameExist(request.nome()))
+        if (categoryRepository.doesCategoryNameExist(request.nome()))
             throw new CategoryAlreadyExistException("Category already registered");
 
-        productRepository.create(request);
+        categoryRepository.create(request);
 
         return request;
     }

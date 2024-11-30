@@ -7,11 +7,11 @@ import java.util.List;
 
 public class GetAllCategoriesUseCaseImpl implements GetAllCategoriesUseCase {
 
-    private ProductRepositoryService productRepository;
+    private CategoryRepositoryService categoryRepository;
 
     @Override
     public List<CategoryDTO> process() {
-        return productRepository.getAll();
+        return categoryRepository.getAll();
     }
 
 }
