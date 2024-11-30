@@ -27,6 +27,6 @@ public class CategoryRepositoryJPAImpl implements CategoryRepositoryService {
 
     @Override
     public boolean doesCategoryNameExist(String name) {
-        return false;
+        return categoryRepositoryJPA.findByNome(name).isPresent();
     }
 }
